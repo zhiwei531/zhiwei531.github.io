@@ -1,107 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Zhiwei Li | Computer Science</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Zhiwei Li | Computer Science & AI" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Zhiwei Li</title>
+<meta name="description" content="Zhiwei Li personal website" />
+<link rel="stylesheet" href="styles.css" />
 </head>
 
-<body style="font-family: Arial, sans-serif; line-height: 1.6; max-width: 900px; margin: auto; padding: 20px;">
+<body>
+<div class="wrap">
 
-  <header>
-    <h1>Zhiwei Li</h1>
-    <p>
-      Applied Math and Computational Science (Computer Science) @ Duke University / Duke Kunshan University<br>
-      Product & AI Enthusiast
-    </p>
-    <p>
-      <a href="mailto:zl457@duke.edu">Email</a> |
-      <a href="https://www.linkedin.com/in/zhiwei-li-457-profile" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/zhiwei531" target="_blank">GitHub</a>
-    </p>
-  </header>
+    <aside class="sidebar">
+        <button class="sidebar-toggle"
+                type="button"
+                aria-controls="sidebar"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            ☰ Menu
+        </button>
+        <nav id="sidebar" aria-label="Section navigation">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
 
-  <hr>
+    <main id="content">
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I am a curious and innovative Computer Science student at Duke Kunshan University,
-      passionate about building practical systems with software and artificial intelligence.
-      I enjoy working at the intersection of engineering, research, and product thinking.
-    </p>
-    <p>
-      With strong foundations in Python and Java, hands-on experience in AI systems such as
-      Retrieval-Augmented Generation (RAG), and a solid sense of design and communication,
-      I aim to build technology that is both intelligent and user-centered.
-    </p>
-    <p>
-      <a href="assets/resume.pdf" target="_blank">View Resume (PDF)</a>
-    </p>
-  </section>
+    <!-- ================= About ================= -->
+    <header class="hero" id="about">
+        <div class="hero-card">
+            <div class="hero-top">
+                <div class="hero-photo">
+                    <img src="assets/profile.jpg" alt="Zhiwei Li profile" class="profile" />
+                </div>
 
-  <hr>
+                <div class="name-block">
+                    <h1 class="name-en">Zhiwei Li</h1>
+                    <div class="name-sub">Product · AI · Software</div>
+                </div>
+            </div>
 
-  <section>
-    <h2>Projects</h2>
+            <div class="hero-content">
+                <p>
+                    I am an undergraduate student at
+                    <a href="https://dukekunshan.edu.cn/" target="_blank" rel="noopener noreferrer">
+                        Duke Kunshan University
+                    </a>,
+                    majoring in Computer Science.
+                    I am interested in <strong>AI systems, agentic RAG, and product-oriented engineering</strong>,
+                    with a strong focus on building tools that are reliable, scalable, and actually used.
+                </p>
 
-    <h3>ChatDKU</h3>
-    <p>
-      An agentic RAG-based AI system developed for Duke Kunshan University.
-      I worked on building retrieval pipelines using DSPy and LlamaIndex,
-      integrating Redis and Chroma for efficient storage and retrieval,
-      and supporting real-world deployment with 50+ daily active users.
-    </p>
-    <p>
-      <a href="https://chatdku.dukekunshan.edu.cn" target="_blank">Live Demo</a>
-    </p>
+                <p>
+                    I have hands-on experience spanning <strong>AI research, backend systems, data automation,
+                    and technical product development</strong>. I am particularly comfortable moving between
+                    research prototypes and production systems.
+                </p>
 
-    <h3>Mapping the Future of AI Education</h3>
-    <p>
-      A university–industry collaborative research project conducted under the U-Corp Program.
-      As team lead, I conducted literature reviews, designed surveys, and coordinated collaboration
-      with Philosophie AI to study global practices in AI education.
-    </p>
-    <p>
-      <a href="https://duke.box.com/s/chtil1wp1nnnqvi66izztd9b5j5gemmp" target="_blank">Project Materials</a>
-    </p>
+                <p class="contact">
+                    Email:
+                    <a href="mailto:zhiwei.li.457@gmail.com">zhiwei.li.457@gmail.com</a> ·
+                    GitHub:
+                    <a href="https://github.com/zhiwei531" target="_blank">zhiwei531</a> ·
+                    LinkedIn:
+                    <a href="https://www.linkedin.com/in/zhiwei-li-457-profile" target="_blank">Profile</a>
+                </p>
+            </div>
+        </div>
+    </header>
 
-    <h3>DKU iGEM (Silver Medal)</h3>
-    <p>
-      Participated in the International Genetically Engineered Machine (iGEM) Competition,
-      contributing to biological modeling and leading the visual design of the project wiki
-      and promotional materials for a Parkinson’s disease therapy project.
-    </p>
-    <p>
-      <a href="https://2025.igem.wiki/dku/index.html" target="_blank">Project Website</a>
-    </p>
+    <!-- ================= Projects ================= -->
+    <section id="projects">
+        <h2>Projects</h2>
 
-    <h3>OpenSeat</h3>
-    <p>
-      A real-time library room booking and visualization system.
-      I led the team to build a FastAPI-based backend and an HTML/CSS/JS frontend,
-      enabling floor-level visualization and real-time availability updates.
-    </p>
-    <p>
-      <a href="https://github.com/zhiwei531/OpenSeat" target="_blank">Source Code</a>
-    </p>
+        <div class="item">
+            <div><strong>ChatDKU</strong> — DKU Edge Intelligence Lab</div>
+            <div class="meta">May 2024 – Jan 2025</div>
+            <p>
+                Developed and maintained an <strong>agentic Retrieval-Augmented Generation (RAG)</strong>
+                system customized for Duke Kunshan University.
+                The system is fully deployed on local servers to ensure institutional data privacy.
+            </p>
+            <p>
+                My work focused on <strong>server maintenance, Redis- and Chroma-based database control,
+                bug fixing</strong>, and investigating new agentic features.
+                I contributed to improving system stability and performance and supported
+                the transition from prototype to officially supported deployment.
+            </p>
+        </div>
 
-  </section>
+        <div class="item">
+            <div><strong>OpenSeat</strong> — Library Seat Reservation System</div>
+            <div class="meta">2024 – Present</div>
+            <p>
+                Led the design and development of a real-time library seat and room availability platform.
+                Built backend services with FastAPI and SQL, and implemented the frontend using
+                HTML, CSS, and JavaScript.
+            </p>
+            <p>
+                The project has been selected for the DKU Innovation Incubator and is under active development.
+            </p>
+        </div>
 
-  <hr>
+        <div class="item">
+            <div><strong>DKU iGEM — Parkinson’s Disease Project</strong></div>
+            <div class="meta">2024</div>
+            <p>
+                Research team member in the Modeling Team and leader of the Art Team.
+                Conducted literature reviews and supported biological modeling,
+                while leading visual communication, video editing, and wiki design.
+            </p>
+        </div>
+    </section>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Email: zhiwei.li.457@gmail.com</p>
-    <p>LinkedIn: www.linkedin.com/in/zhiwei-li-457-profile</p>
-  </section>
+    <!-- ================= Research ================= -->
+    <section id="research">
+        <h2>Research</h2>
 
-  <hr>
+        <div class="item">
+            <div><strong>Edge Intelligence Lab</strong> — Research Assistant</div>
+            <div class="meta">Duke Kunshan University</div>
+            <p>
+                Supported research and production deployment of AI systems,
+                focusing on agent-based architectures and retrieval-augmented generation.
+                Gained experience bridging research ideas and real-world constraints.
+            </p>
+        </div>
 
-  <footer>
-    <p>© Zhiwei Li</p>
-  </footer>
+        <div class="item">
+            <div><strong>Mapping the Future of AI Education</strong></div>
+            <div class="meta">2024 – 2025</div>
+            <p>
+                Research team member for a global study on institutional AI education practices.
+                Conducted literature reviews, survey design, and cross-team coordination.
+            </p>
+        </div>
+    </section>
+
+    <!-- ================= Experience ================= -->
+    <section id="experience">
+        <h2>Experience</h2>
+
+        <div class="item">
+            <div><strong>Data Analyst Intern</strong> — HP</div>
+            <div class="meta">Supplies Business</div>
+            <p>
+                Designed and implemented <strong>data processing automation programs</strong>
+                to streamline repetitive workflows in supplies management.
+                These tools significantly reduced manual workload for staff and
+                improved operational efficiency and data reliability.
+            </p>
+        </div>
+
+        <div class="item">
+            <div><strong>Student Leadership Roles</strong></div>
+            <p>
+                Served as Orientation Leader, Sports Department Park Run Organizer,
+                Teaching Assistant, and Head of Activities Department in the Psychology Society.
+            </p>
+        </div>
+    </section>
+
+    <!-- ================= Teaching ================= -->
+    <section id="teaching">
+        <h2>Teaching</h2>
+
+        <div class="item">
+            <div><strong>Teaching Assistant — Calculus</strong></div>
+            <div class="meta">Duke Kunshan University</div>
+            <p>
+                Delivered weekly recitation sessions covering limits, derivatives,
+                and applications, and provided one-on-one academic support during office hours.
+            </p>
+        </div>
+    </section>
+
+    <!-- ================= Contact ================= -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>
+            Email:
+            <a href="mailto:zhiwei.li.457@gmail.com">zhiwei.li.457@gmail.com</a>
+            <br />
+            GitHub:
+            <a href="https://github.com/zhiwei531" target="_blank">github.com/zhiwei531</a>
+            <br />
+            LinkedIn:
+            <a href="https://www.linkedin.com/in/zhiwei-li-457-profile" target="_blank">
+                linkedin.com/in/zhiwei-li-457-profile
+            </a>
+        </p>
+    </section>
+
+    </main>
+</div>
+
+<script>
+(() => {
+    const toggle = document.querySelector('.sidebar-toggle');
+    const mq = window.matchMedia('(max-width: 700px)');
+    if (!toggle) return;
+
+    const setExpanded = (state) =>
+        toggle.setAttribute('aria-expanded', state ? 'true' : 'false');
+
+    const sync = () => {
+        if (!mq.matches) {
+            toggle.hidden = true;
+            document.body.classList.remove('sidebar-visible');
+            setExpanded(true);
+        } else {
+            toggle.hidden = false;
+            setExpanded(false);
+        }
+    };
+
+    toggle.addEventListener('click', () => {
+        if (!mq.matches) return;
+        const open = document.body.classList.toggle('sidebar-visible');
+        setExpanded(open);
+    });
+
+    mq.addEventListener('change', sync);
+    sync();
+})();
+</script>
 
 </body>
 </html>

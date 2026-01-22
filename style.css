@@ -1,0 +1,422 @@
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #666666;
+  --link: #0645ad;
+  --border: #e5e5e5;
+  --content-width: 920px;
+  --sidebar-width: 200px;
+  --radius: 6px;
+  --space: 16px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0b0b;
+    --text: #eaeaea;
+    --muted: #b3b3b3;
+    --link: #4da3ff;
+    --border: #222222;
+  }
+}
+
+* { box-sizing: border-box; }
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: var(--bg);
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+
+.wrap {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 clamp(0px, 7vw, 120px);
+  max-width: calc(160px + var(--content-width) + 200px);
+  display: grid;
+  grid-template-columns: auto minmax(0, var(--content-width));
+  justify-content: center;
+  align-items: start;
+  column-gap: 0px;
+}
+
+
+.sidebar {
+  grid-column: 1;
+  justify-self: end;
+  width: 120px;
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+nav {
+  width: 100%;
+  text-align: left;
+}
+
+nav .name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+}
+
+nav li { margin: 6px 0; }
+nav a { color: var(--text); }
+
+main {
+  grid-column: 2;
+  max-width: var(--content-width);
+}
+
+header.hero {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: 12px; /* add some breathing room for small viewports */
+  border: 0;
+  color: var(--text);
+  /* removed internal scrolling so the main page scrollbar is used */
+  /* overflow-y: auto; */
+}
+
+/* Layout inside the hero: left content + right profile photo */
+.hero-card {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 0 12px;
+  /* allow the card to grow naturally; remove internal max-height/overflow */
+  /* max-height: calc(100svh - 24px);
+  overflow: auto; */
+}
+
+/* top row: name and photo side-by-side */
+.hero-top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  flex-wrap: wrap; /* allow items to wrap instead of overflowing on narrow widths */
+}
+
+/* name block */
+.name-block { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.name-zh {
+  font-size: 2rem;
+  margin: 0;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.name-en {
+  font-size: 1rem;
+  margin-top: 6px;
+  color: var(--muted);
+}
+
+/* keep photo sizing consistent and responsive */
+.hero-photo {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile {
+  /* width: 160px;
+  height: 120px; */ /* removed fixed height */
+  width: clamp(100px, 18vw, 160px);
+  height: auto;
+  max-height: 30vh;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid var(--border);
+  display: block;
+}
+
+header.hero h1 {
+  font-size: 1.8rem;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
+
+header.hero p {
+  margin: 0.35rem 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.tag {
+  border: 1px solid var(--border);
+  padding: 2px 8px;
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+section {
+  margin: 32px 0;
+}
+
+/* place the separator explicitly after the about/hero section */
+header.hero + section {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+section h2 {
+  /* larger, more prominent section titles (increased) */
+  font-size: 1.75rem; /* was 1.4rem */
+  margin: 0 0 10px 0;
+  letter-spacing: 0.2px;
+  font-weight: 800;
+}
+
+/* increase spacing between items more */
+.item { 
+  margin: 32px 0; /* increased to give clearer separation between items */
+}
+
+/* tighten spacing inside each item: paragraphs and lists closer together */
+.item p,
+.item ul,
+.item ol {
+  margin: 0.28rem 0; /* smaller than browser default */
+}
+
+.item li {
+  margin: 0.25rem 0; /* tighter list items */
+}
+
+/* small adjustment for item header and meta spacing */
+.item > div:first-child {
+  margin-bottom: 6px;
+}
+.item .meta {
+  margin: 6px 0 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Make the item header larger but not fully bold;
+   keep only the <strong> title bold so trailing text (— Prof...) is normal weight. */
+.item > div:first-child {
+  font-size: 1.15rem;
+  font-weight: 400; /* normal weight for the whole header */
+  color: var(--text);
+  margin-bottom: 6px; /* small gap before meta / body */
+}
+.item > div:first-child strong {
+  font-weight: 700; /* only the strong text is bold */
+}
+
+/* keep sizes comfortable on small screens */
+@media (max-width: 600px) {
+  section h2 { font-size: 1.4rem; }
+  .item > div:first-child { font-size: 1.02rem; }
+  .item { margin: 32px 0; } /* slightly smaller separation on small screens */
+}
+
+/* small highlighted note for announcements / links in sections */
+.note {
+  border-left: 4px solid var(--link);
+  background: rgba(0,0,0,0.03);
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin: 8px 0 16px;
+  color: var(--text);
+  font-size: 0.98rem;
+}
+.note a { color: var(--link); font-weight: 600; text-decoration: none; }
+.note a:hover { text-decoration: underline; }
+
+.figure {
+  text-align: center;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 8px auto;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+.figure figcaption {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* horizontal figure: ensure images and embeds sit side-by-side; allow inline widths */
+.figure-horizontal {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center; /* center images/iframe vertically */
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+/* ensure each direct child centers itself in the cross axis */
+.figure-horizontal > * {
+  align-self: center;
+}
+
+/* Ensure figcaption always appears on its own line below the images */
+.figure-horizontal figcaption {
+  flex: 0 0 100%;
+  order: 2;
+  margin-top: 8px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* mobile: stack vertically */
+@media (max-width: 700px) {
+  .figure-horizontal img {
+    width: 100%;
+    max-width: 100%;
+  }
+  .figure-horizontal iframe {
+    width: 100% !important;
+    height: auto;
+  }
+}
+
+.list { padding-left: 1.1rem; }
+hr { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
+
+footer {
+  margin: 48px 0 24px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.contact a { margin-right: 12px; }
+
+.skip {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip:focus {
+  left: 12px;
+  top: 12px;
+  background: var(--bg);
+  color: var(--text);
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  z-index: 2;
+}
+
+.sidebar-toggle {
+  display: none;
+  align-self: flex-start;
+  z-index: 80;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 0.95rem;
+  line-height: 1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.sidebar-toggle:focus {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+@media (max-width: 700px) {
+  .wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: none;
+    gap: 12px;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: static;
+    transform: none;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  main {
+    width: 100%;
+    max-width: none;
+  }
+
+  #sidebar {
+    display: none;
+    position: fixed;
+    top: 56px;
+    left: 12px;
+    right: auto;
+    width: min(220px, calc(100vw - 60px));
+    background: var(--bg);
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    text-align: left;
+    max-height: calc(100vh - 88px);
+    overflow-y: auto;
+    z-index: 70;
+  }
+
+  .sidebar-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 12px;
+    left: 12px;
+  }
+
+  body.sidebar-visible #sidebar {
+    display: block;
+  }
+}

@@ -58,7 +58,7 @@ a:hover { text-decoration: underline; }
   transform: translateY(-50%);
 
   max-height: 50vh;
-  overflow-y: auto;
+  overflow-y: hidden;
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -84,6 +84,11 @@ nav ul {
 
 nav li { margin: 6px 0; }
 nav a { color: var(--text); }
+
+.nav-link.active {
+  font-weight: 600;
+  color: #000;
+}
 
 main {
   grid-column: 2;

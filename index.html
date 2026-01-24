@@ -22,9 +22,9 @@
         </button>
         <nav id="sidebar" aria-label="Section navigation">
             <ul>
-                <li><a href="#about">About</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
                 <li>
-                    <a href="#projects">Projects</a>
+                    <a href="#projects" class="nav-link">Projects</a>
                     <ul class="subnav">
                         <li><a href="#project-naviroom">NaviRoom</a></li>
                         <li><a href="#project-syllanize">Syllanize</a></li>
@@ -32,7 +32,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#research">Research</a>
+                    <a href="#research" class="nav-link">Research</a>
                     <ul class="subnav">
                         <li><a href="#research-chatdku">ChatDKU</a></li>
                         <li><a href="#research-igem">iGEM</a></li>
@@ -40,14 +40,14 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#experience">Experience</a>
+                    <a href="#experience" class="nav-link">Experience</a>
                     <ul class="subnav">
                         <li><a href="#working-hp">HP Intern</a></li>
                         <li><a href="#working-ce">UPA</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#leaderships">Leaderships</a>
+                    <a href="#leaderships" class="nav-link">Leaderships</a>
                     <ul class="subnav">
                         <li><a href="#leadership-ol">Orientation Leader</a></li>
                         <li><a href="#leadership-parkrun">ParkRun Organizor</a></li>
@@ -55,13 +55,13 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#teaching">Teaching</a>
+                    <a href="#teaching" class="nav-link">Teaching</a>
                     <ul class="subnav">
                         <li><a href="#teaching-math105">Calculus</a></li>
                         <li><a href="#teaching-dku101">DKU 101</a></li>
                     </ul>
                 </li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </aside>
@@ -466,7 +466,7 @@
 })();
 </script>
 
-<script>
+<!-- <script>
 const items = document.querySelectorAll('.item[id]');
 const links = document.querySelectorAll('#sidebar a');
 
@@ -487,7 +487,40 @@ const observer = new IntersectionObserver(entries => {
 }, { rootMargin: '-40% 0px -50% 0px' });
 
 items.forEach(i => observer.observe(i));
-</script>
+</script> -->
+<script>
+const sections = document.querySelectorAll('main section');
+const navLinks = document.querySelectorAll('.nav-link');
+const sidebar = document.querySelector('.sidebar');
 
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+
+      const id = entry.target.id;
+      const activeLink = document.querySelector(
+        `.nav-link[href="#${id}"]`
+      );
+
+      navLinks.forEach(link => link.classList.remove('active'));
+      activeLink.classList.add('active');
+
+      /* ⭐ 自动把 active item 滚到 sidebar 中心 */
+      activeLink.scrollIntoView({
+        block: 'center',
+        inline: 'nearest',
+        behavior: 'smooth'
+      });
+    });
+  },
+  {
+    rootMargin: '-40% 0px -40% 0px', // 页面中部触发
+    threshold: 0
+  }
+);
+
+sections.forEach(section => observer.observe(section));
+</script>
 </body>
 </html>

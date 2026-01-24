@@ -491,7 +491,9 @@ items.forEach(i => observer.observe(i));
 <script>
 const sections = document.querySelectorAll('main section');
 const navLinks = document.querySelectorAll('.nav-link');
-const sidebar = document.querySelector('.sidebar');
+
+let currentActiveId = null;
+let isAutoScrolling = false;
 
 const observer = new IntersectionObserver(
   entries => {
@@ -499,6 +501,12 @@ const observer = new IntersectionObserver(
       if (!entry.isIntersecting) return;
 
       const id = entry.target.id;
+
+      // 🚫 如果还是同一个 section，直接忽略
+      if (id === currentActiveId) return;
+
+      currentActiveId = id;
+
       const activeLink = document.querySelector(
         `.nav-link[href="#${id}"]`
       );
@@ -506,16 +514,25 @@ const observer = new IntersectionObserver(
       navLinks.forEach(link => link.classList.remove('active'));
       activeLink.classList.add('active');
 
-      /* ⭐ 自动把 active item 滚到 sidebar 中心 */
+      // 🚫 阻止 observer 触发期间再次滚动
+      if (isAutoScrolling) return;
+
+      isAutoScrolling = true;
+
       activeLink.scrollIntoView({
         block: 'center',
         inline: 'nearest',
-        behavior: 'smooth'
+        behavior: 'auto' // ❗禁止 smooth
+      });
+
+      // 下一帧解锁
+      requestAnimationFrame(() => {
+        isAutoScrolling = false;
       });
     });
   },
   {
-    rootMargin: '-40% 0px -40% 0px', // 页面中部触发
+    rootMargin: '-45% 0px -45% 0px',
     threshold: 0
   }
 );

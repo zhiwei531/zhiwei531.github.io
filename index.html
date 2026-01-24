@@ -87,41 +87,55 @@
         <h2>Projects</h2>
 
         <div class="item">
-            <div><strong>ChatDKU</strong> — DKU Edge Intelligence Lab</div>
-            <div class="meta">May 2024 – Present</div>
-            <p>
-                Developed and maintained an <strong>agentic Retrieval-Augmented Generation (RAG)</strong>
-                system customized for Duke Kunshan University and fully deployed on local servers to ensure
-                institutional data privacy and security.
-            </p>
-            <p>
-                My work spans agent feature design, retrieval pipeline engineering, backend service
-                maintenance, and infrastructure optimization. I focus on building stable, production-ready
-                AI systems that support real users in daily academic workflows.
-            </p>
-        </div>
-
-        <div class="item">
-            <div><strong>OpenSeat</strong> — Library Seat Reservation System</div>
+            <div><strong>NaviRoom</strong> — AI-Powered Intelligent Room Recommendation System for Multi-organizations</div>
             <div class="meta">2024 – Present</div>
             <p>
-                Led the design and development of a real-time library seat and room availability platform.
-                Built backend services with FastAPI and SQL, and implemented the frontend using
-                HTML, CSS, and JavaScript.
+                NaviRoom is an AI-driven platform designed to improve transparency, accessibility, and 
+                utilization efficiency of shared spaces in university environments. The project addresses 
+                a common institutional challenge: campus room information is often fragmented across CSV files,
+                 Excel sheets, and unstructured free-text descriptions, making discovery, comparison, and 
+                 recommendation inefficient and error-prone.
             </p>
             <p>
-                The project has been selected for the DKU Innovation Incubator and is under active development.
+                The core of NaviRoom focuses on transforming messy, heterogeneous room data into a unified 
+                and structured knowledge layer. I designed and implemented modern NLP workflows powered by 
+                DSPy-based large language model orchestration to robustly parse natural language and semi-structured 
+                inputs into standardized room features, including capacity, equipment, layout, intended use cases, 
+                accessibility attributes, and room type. This structured representation enables reliable downstream 
+                search, recommendation, and visualization.
+            </p>
+            <p>
+                The project has been selected for the DKU Innovation Incubator with 5,000 RMB funds and is under active development.
             </p>
         </div>
 
         <div class="item">
-            <div><strong>DKU iGEM — Parkinson’s Disease Project</strong></div>
-            <div class="meta">2024 – 2025</div>
+            <div><strong>Syllanize</strong> — Course Syllabus Visualization Project</div>
+            <div class="meta">August 2024 – November 2024</div>
             <p>
-                Research team member responsible for literature review, biological modeling support,
-                and scientific visualization. I also led visual communication efforts, including
-                figure design, video editing, and wiki presentation, to clearly convey complex
-                biological concepts and modeling results.
+                Syllanize is a course syllabus parsing and visualization project designed to
+                transform unstructured PDF syllabi into structured, comparable academic data.
+                The project addresses a common student pain point: course requirements,
+                grading schemes, and workload information are often buried in long,
+                inconsistently formatted syllabus documents, making cross-course comparison
+                difficult.
+            </p>
+            <p>
+                I designed and implemented an LLM-powered parsing pipeline that automatically
+                extracts graded components (e.g., exams, homework, quizzes, projects,
+                participation) from syllabus PDFs. Using GPT-based extraction with confidence
+                filtering, the system converts raw syllabus text into structured records while
+                handling diverse layouts, noisy formatting, and ambiguous descriptions.
+                Low-confidence items are automatically filtered to ensure data reliability.
+            </p>
+            <p>
+                The pipeline supports batch processing of multiple syllabi and outputs a
+                unified dataset that enables downstream visualization and analysis of grading
+                structures across courses. Parsed results can be used to compare workload
+                distributions, identify assessment patterns, and support data-driven course
+                selection. The project demonstrates how LLMs can be applied to academic
+                document intelligence, replacing brittle rule-based parsing with flexible,
+                example-driven extraction.
             </p>
         </div>
     </section>
@@ -146,6 +160,20 @@
                 PostgreSQL). I introduced modular refactoring, CI workflows, and Git-based version
                 control practices, supporting over 50 daily active users and improving response
                 accuracy by approximately 35% in real-world usage.
+            </p>
+        </div>
+        
+        <div class="item">
+            <div><strong>DKU iGEM — Parkinson’s Disease Project</strong></div>
+            <div class="meta">2024 – 2025</div>
+            <p>
+                Research team member responsible for literature review, biological modeling support,
+                and scientific visualization. I also led visual communication efforts, including
+                figure design, video editing, and wiki presentation, to clearly convey complex
+                biological concepts and modeling results.
+            </p>
+            <p>
+                This project won a silver medal in the final pitch. 
             </p>
         </div>
 

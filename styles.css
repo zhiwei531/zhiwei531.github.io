@@ -108,6 +108,11 @@ main {
   color: #000;
 }
 
+#sidebar a.active {
+  font-weight: 600;
+  color: #000;
+}
+
 header.hero {
   min-height: 100svh;
   display: flex;

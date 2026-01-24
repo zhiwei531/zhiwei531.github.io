@@ -55,7 +55,7 @@ a:hover { text-decoration: underline; }
   justify-self: end;
   position: sticky;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-16px, -50%);
 
   max-height: 50vh;
   overflow-y: hidden;

@@ -185,6 +185,7 @@
         <div>
             <strong>Emergence + Interactive Behaviors as Forms</strong> — Generative Systems & Computational Art Portfolio
         </div>
+        <div class="meta">October 2025 - December 2025</div>
         <p>
             <em><a href="https://docs.google.com/document/d/1-9LvUaNYXtNyC0wnZ3wM34BBXraTOf_Q9b8EKZrsun4/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
                         Emergence + Interactive Behaviors as Forms
@@ -281,6 +282,7 @@
 
         <div class="item" id="working-hp">
             <div><strong>Data Analyst Intern</strong> — HP</div>
+            <div class="meta">November 2025 - January 2026</div>
             <div class="meta">Supplies Business · Beijing</div>
             <p>
                 During my internship at HP, I focused on supplies business data management and
@@ -435,109 +437,6 @@
     </main>
 </div>
 
-<script>
-(() => {
-    const toggle = document.querySelector('.sidebar-toggle');
-    const mq = window.matchMedia('(max-width: 700px)');
-    if (!toggle) return;
-
-    const setExpanded = (state) =>
-        toggle.setAttribute('aria-expanded', state ? 'true' : 'false');
-
-    const sync = () => {
-        if (!mq.matches) {
-            toggle.hidden = true;
-            document.body.classList.remove('sidebar-visible');
-            setExpanded(true);
-        } else {
-            toggle.hidden = false;
-            setExpanded(false);
-        }
-    };
-
-    toggle.addEventListener('click', () => {
-        if (!mq.matches) return;
-        const open = document.body.classList.toggle('sidebar-visible');
-        setExpanded(open);
-    });
-
-    mq.addEventListener('change', sync);
-    sync();
-})();
-</script>
-
-<!-- <script>
-const items = document.querySelectorAll('.item[id]');
-const links = document.querySelectorAll('#sidebar a');
-
-const map = {};
-links.forEach(a => {
-  const id = a.getAttribute('href')?.slice(1);
-  if (id) map[id] = a;
-});
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      links.forEach(a => a.classList.remove('active'));
-      const link = map[entry.target.id];
-      if (link) link.classList.add('active');
-    }
-  });
-}, { rootMargin: '-40% 0px -50% 0px' });
-
-items.forEach(i => observer.observe(i));
-</script> -->
-<script>
-const sections = document.querySelectorAll('main section');
-const navLinks = document.querySelectorAll('.nav-link');
-
-let currentActiveId = null;
-let isAutoScrolling = false;
-
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-
-      const id = entry.target.id;
-
-      // 🚫 如果还是同一个 section，直接忽略
-      if (id === currentActiveId) return;
-
-      currentActiveId = id;
-
-      const activeLink = document.querySelector(
-        `.nav-link[href="#${id}"]`
-      );
-
-      navLinks.forEach(link => link.classList.remove('active'));
-      activeLink.classList.add('active');
-
-      // 🚫 阻止 observer 触发期间再次滚动
-      if (isAutoScrolling) return;
-
-      isAutoScrolling = true;
-
-      activeLink.scrollIntoView({
-        block: 'center',
-        inline: 'nearest',
-        behavior: 'auto' // ❗禁止 smooth
-      });
-
-      // 下一帧解锁
-      requestAnimationFrame(() => {
-        isAutoScrolling = false;
-      });
-    });
-  },
-  {
-    rootMargin: '-45% 0px -45% 0px',
-    threshold: 0
-  }
-);
-
-sections.forEach(section => observer.observe(section));
-</script>
+<script src="js/effects.js" defer></script>
 </body>
 </html>

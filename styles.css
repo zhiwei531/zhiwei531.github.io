@@ -58,7 +58,7 @@ a:hover { text-decoration: underline; }
   transform: translate(-16px, -50%);
 
   max-height: 50vh;
-  overflow-y: hidden;
+  overflow-y: auto;
   align-items: flex-start;
   display: flex;
   flex-direction: column;

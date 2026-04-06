@@ -141,7 +141,7 @@
         },
         {
           "id": "project-birds",
-          "headingHtml": "Motion Based Birds Classification System",
+          "headingHtml": "<strong>Motion Based Birds Classification System</strong> - Machine Learning + Computer Vision Project",
           "metas": ["October 2025 - January 2026"],
           "paragraphs": [
             "I designed and implemented a specialized computer vision and machine learning pipeline to identify Spoon-billed Sandpipers based on their distinctive foraging behaviors, especially sweeping versus pecking. Instead of treating the task as a black-box video classification problem, I built the system around the ecological realities of small sample sizes, tiny targets, complex backgrounds, and fine-grained motion differences.",

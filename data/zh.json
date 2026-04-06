@@ -19,6 +19,7 @@
       "className": "nav-link",
       "children": [
         { "id": "project-naviroom", "label": "NaviRoom" },
+        { "id": "project-birds", "label": "勺嘴鹬行为分析" },
         { "id": "project-syllanize", "label": "Syllanize" },
         { "id": "project-cs208", "label": "计算艺术" }
       ]
@@ -126,6 +127,31 @@
             "NaviRoom 是一款人工智能驱动的平台，旨在提升高校环境中共享空间的透明度、可访问性和使用效率。该项目解决了一个普遍的机构性痛点：校园会议室信息通常分散在CSV文件、Excel表格和非结构化自由文本描述中，导致会议室的查找、对比和推荐过程低效且容易出错。",
             "NaviRoom 的核心在于将杂乱、异构的会议室数据转化为统一、结构化的知识层。我设计并实现了基于DSPy大语言模型编排的现代自然语言处理工作流，能够稳健地将自然语言和半结构化输入解析为标准化的会议室特征，包括容纳人数、设备配置、布局结构、预期使用场景、无障碍属性和会议室类型。这种结构化表示为后续可靠的搜索、推荐和可视化功能奠定了基础。",
             "该项目已入选昆山杜克大学创新孵化器，获得5000元人民币项目资金支持，目前处于积极开发阶段。"
+          ],
+          "links": [
+            {
+              "href": "http://naviroom.cn/",
+              "label": "NaviRoom 网站"
+            },
+            {
+              "href": "https://github.com/zhiwei531/NaviRoom",
+              "label": "NaviRoom GitHub 项目仓库"
+            }
+          ]
+        },
+        {
+          "id": "project-birds",
+          "headingHtml": "<strong>勺嘴鹬行为分析流程</strong>",
+          "metas": ["2025年10月 - 2026年1月"],
+          "paragraphs": [
+            "我设计并实现了一套专门用于识别勺嘴鹬（Spoon-billed Sandpiper）觅食行为的计算机视觉与机器学习流程，重点区分其特征性的横扫式觅食与啄食行为。与将任务视为黑盒视频分类不同，我围绕这一生态场景的实际挑战来构建系统，包括样本量有限、目标体积小、背景复杂，以及动作差异细粒度等问题。",
+            "整个流程由三个相互解耦的阶段组成：首先通过结合运动检测、YOLO 验证和相机稳像的检测模块，将鸟体从环境中稳定提取出来；随后使用基于 DeepLabCut 的姿态分析与几何归一化，在统一坐标系下量化运动特征；最后采用带正则化的逻辑回归分类器与嵌套交叉验证，从生物力学相关特征中推断具有解释性的行为模式。"
+          ],
+          "links": [
+            {
+              "href": "https://github.com/zhiwei531/motion-based-brids-classification",
+              "label": "勺嘴鹬行为分析 GitHub 仓库"
+            }
           ]
         },
         {
@@ -167,8 +193,8 @@
           ],
           "links": [
             {
-              "href": "https://chatdku.dukekunshan.edu.cn/",
-              "label": "ChatDKU 网站（需要连接DKU内部网络）"
+              "href": "https://chatdku.com/",
+              "label": "ChatDKU 网站（公共网站）"
             }
           ]
         },

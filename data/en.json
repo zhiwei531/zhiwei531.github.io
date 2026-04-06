@@ -19,6 +19,7 @@
       "className": "nav-link",
       "children": [
         { "id": "project-naviroom", "label": "NaviRoom" },
+        { "id": "project-birds", "label": "Motion Based Birds Classification System" },
         { "id": "project-syllanize", "label": "Syllanize" },
         { "id": "project-cs208", "label": "Emergence + Interactive" }
       ]
@@ -121,11 +122,36 @@
         {
           "id": "project-naviroom",
           "headingHtml": "<strong>NaviRoom</strong> — AI-Powered Intelligent Room Recommendation System for Multi-organizations",
-          "metas": ["November 2024 - Present"],
+          "metas": ["November 2025 - Present"],
           "paragraphs": [
             "NaviRoom is an AI-driven platform designed to improve transparency, accessibility, and utilization efficiency of shared spaces in university environments. The project addresses a common institutional challenge: campus room information is often fragmented across CSV files, Excel sheets, and unstructured free-text descriptions, making discovery, comparison, and recommendation inefficient and error-prone.",
             "The core of NaviRoom focuses on transforming messy, heterogeneous room data into a unified and structured knowledge layer. I designed and implemented modern NLP workflows powered by DSPy-based large language model orchestration to robustly parse natural language and semi-structured inputs into standardized room features, including capacity, equipment, layout, intended use cases, accessibility attributes, and room type. This structured representation enables reliable downstream search, recommendation, and visualization.",
             "The project has been selected for the DKU Innovation Incubator with 5,000 RMB funds and is under active development."
+          ],
+          "links": [
+            {
+              "href": "http://naviroom.cn/",
+              "label": "NaviRoom Website"
+            },
+            {
+              "href": "https://github.com/zhiwei531/NaviRoom",
+              "label": "NaviRoom GitHub Repository"
+            }
+          ]
+        },
+        {
+          "id": "project-birds",
+          "headingHtml": "Motion Based Birds Classification System",
+          "metas": ["October 2025 - January 2026"],
+          "paragraphs": [
+            "I designed and implemented a specialized computer vision and machine learning pipeline to identify Spoon-billed Sandpipers based on their distinctive foraging behaviors, especially sweeping versus pecking. Instead of treating the task as a black-box video classification problem, I built the system around the ecological realities of small sample sizes, tiny targets, complex backgrounds, and fine-grained motion differences.",
+            "The pipeline is organized into three decoupled stages: hybrid motion-YOLO detection with camera stabilization to isolate birds from the environment, DeepLabCut-based pose analysis with geometric normalization to quantify movement in a canonical coordinate system, and a regularized logistic regression classifier with nested cross-validation to infer behaviorally meaningful patterns from biomechanical features."
+          ],
+          "links": [
+            {
+              "href": "https://github.com/zhiwei531/motion-based-brids-classification",
+              "label": "Motion based birds classification GitHub Repository"
+            }
           ]
         },
         {
@@ -167,8 +193,8 @@
           ],
           "links": [
             {
-              "href": "https://chatdku.dukekunshan.edu.cn/",
-              "label": "ChatDKU Website (DKU internal website only)"
+              "href": "https://chatdku.com/",
+              "label": "ChatDKU Website (public website)"
             }
           ]
         },

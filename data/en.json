@@ -19,7 +19,7 @@
       "className": "nav-link",
       "children": [
         { "id": "project-naviroom", "label": "NaviRoom" },
-        { "id": "project-birds", "label": "Motion Based Birds Classification System" },
+        { "id": "project-birds", "label": "Birds Classification" },
         { "id": "project-syllanize", "label": "Syllanize" },
         { "id": "project-cs208", "label": "Emergence + Interactive" }
       ]

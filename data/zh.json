@@ -19,7 +19,7 @@
       "className": "nav-link",
       "children": [
         { "id": "project-naviroom", "label": "NaviRoom" },
-        { "id": "project-birds", "label": "勺嘴鹬行为分析" },
+        { "id": "project-birds", "label": "滨鸟分类系统" },
         { "id": "project-syllanize", "label": "Syllanize" },
         { "id": "project-cs208", "label": "计算艺术" }
       ]

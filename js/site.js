@@ -17,12 +17,18 @@
   }
 
   function createStandaloneLinks(links = []) {
-    return links
-      .map(
-        (link) =>
-          `<a href="${link.href}" target="_blank" rel="noopener noreferrer">${link.label}</a>`
-      )
-      .join("");
+    if (!links.length) return "";
+
+    return `
+      <div class="item-links">
+        ${links
+          .map(
+            (link) =>
+              `<a href="${link.href}" target="_blank" rel="noopener noreferrer">${link.label}</a>`
+          )
+          .join("")}
+      </div>
+    `;
   }
 
   function createItems(items = []) {

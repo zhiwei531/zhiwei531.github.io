@@ -266,6 +266,17 @@ section h2 {
   font-size: 0.95rem;
 }
 
+.item-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.item-links a {
+  display: inline-block;
+}
+
 /* Make the item header larger but not fully bold;
    keep only the <strong> title bold so trailing text (— Prof...) is normal weight. */
 .item > div:first-child {

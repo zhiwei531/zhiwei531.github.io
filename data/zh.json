@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "lang": "zh-CN",
+    "title": "李知薇",
+    "description": "李知薇个人网站",
+    "sidebarToggleLabel": "切换导航",
+    "sidebarToggleText": "☰ 菜单",
+    "sidebarAriaLabel": "章节导航"
+  },
+  "nav": [
+    {
+      "id": "about",
+      "label": "关于我",
+      "className": "nav-link"
+    },
+    {
+      "id": "projects",
+      "label": "项目经历",
+      "className": "nav-link",
+      "children": [
+        { "id": "project-naviroom", "label": "NaviRoom" },
+        { "id": "project-syllanize", "label": "Syllanize" },
+        { "id": "project-cs208", "label": "计算艺术" }
+      ]
+    },
+    {
+      "id": "research",
+      "label": "科研经历",
+      "className": "nav-link",
+      "children": [
+        { "id": "research-chatdku", "label": "ChatDKU" },
+        { "id": "research-igem", "label": "iGEM" },
+        { "id": "research-ucorp", "label": "U-Corp" }
+      ]
+    },
+    {
+      "id": "working",
+      "label": "工作经历",
+      "className": "nav-link",
+      "children": [
+        { "id": "working-hp", "label": "惠普实习" },
+        { "id": "working-ce", "label": "校园事务办公室" }
+      ]
+    },
+    {
+      "id": "leaderships",
+      "label": "学生领导力",
+      "className": "nav-link",
+      "children": [
+        { "id": "leadership-ol", "label": "新生入学导师" },
+        { "id": "leadership-parkrun", "label": "公园跑组织者" },
+        { "id": "leadership-mood", "label": "木禾心理" }
+      ]
+    },
+    {
+      "id": "teaching",
+      "label": "教学经历",
+      "className": "nav-link",
+      "children": [
+        { "id": "teaching-math105", "label": "微积分助教" },
+        { "id": "teaching-dku101", "label": "DKU 101助教" }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": "联系方式",
+      "className": "nav-link"
+    }
+  ],
+  "hero": {
+    "id": "about",
+    "photoSrc": "assets/profile.jpg",
+    "photoAlt": "李知薇个人头像",
+    "name": "李知薇",
+    "nameClass": "name-en",
+    "subtitle": "产品 · 人工智能 · 软件研发",
+    "paragraphs": [
+      "我是<a href=\"https://www.duke.edu/\" target=\"_blank\" rel=\"noopener noreferrer\">杜克大学</a> / <a href=\"https://www.dukekunshan.edu.cn/\" target=\"_blank\" rel=\"noopener noreferrer\">昆山杜克大学</a>本科生，主修应用数学与计算科学（计算机科学方向）。我的研究和学习兴趣聚焦于<strong>人工智能智能体与系统、机器学习，以及产品导向的工程研发</strong>，始终致力于打造可靠、可扩展且具有实际落地价值的工具与系统。",
+      "我拥有丰富的<strong>人工智能科研、后端系统开发、数据自动化，以及技术产品研发</strong>实战经验，尤其擅长在科研原型验证与生产级系统落地之间搭建桥梁，实现技术的高效转化。"
+    ],
+    "details": [
+      {
+        "label": "主修课程",
+        "text": "机器学习、编程与数据库（成绩A+）、概率论与数理统计、线性代数、微积分、计算机图形学（成绩A+）。"
+      },
+      {
+        "label": "荣誉奖项",
+        "text": "2024年秋季学期院长荣誉名单、2025年春季学期院长荣誉名单、2025年秋季学期院长荣誉名单。"
+      }
+    ],
+    "contacts": [
+      {
+        "label": "邮箱",
+        "href": "mailto:zl457@duke.edu",
+        "text": "zl457@duke.edu"
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com/zhiwei531",
+        "text": "zhiwei531",
+        "external": true
+      },
+      {
+        "label": "领英",
+        "href": "https://www.linkedin.com/in/zhiwei-li-457-profile",
+        "text": "个人档案",
+        "external": true
+      },
+      {
+        "label": "个人简历",
+        "href": "assets/Zhiwei_Li_CV_ENG.pdf",
+        "text": "(PDF 格式)"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "projects",
+      "title": "项目经历",
+      "items": [
+        {
+          "id": "project-naviroom",
+          "headingHtml": "<strong>NaviRoom</strong> — 面向多组织的人工智能驱动智能会议室推荐系统",
+          "metas": ["2024年11月 - 至今"],
+          "paragraphs": [
+            "NaviRoom 是一款人工智能驱动的平台，旨在提升高校环境中共享空间的透明度、可访问性和使用效率。该项目解决了一个普遍的机构性痛点：校园会议室信息通常分散在CSV文件、Excel表格和非结构化自由文本描述中，导致会议室的查找、对比和推荐过程低效且容易出错。",
+            "NaviRoom 的核心在于将杂乱、异构的会议室数据转化为统一、结构化的知识层。我设计并实现了基于DSPy大语言模型编排的现代自然语言处理工作流，能够稳健地将自然语言和半结构化输入解析为标准化的会议室特征，包括容纳人数、设备配置、布局结构、预期使用场景、无障碍属性和会议室类型。这种结构化表示为后续可靠的搜索、推荐和可视化功能奠定了基础。",
+            "该项目已入选昆山杜克大学创新孵化器，获得5000元人民币项目资金支持，目前处于积极开发阶段。"
+          ]
+        },
+        {
+          "id": "project-syllanize",
+          "headingHtml": "<strong>Syllanize</strong> — 课程大纲可视化项目",
+          "metas": ["2024年8月 - 2024年11月"],
+          "paragraphs": [
+            "Syllanize 是一个课程大纲解析与可视化项目，旨在将非结构化的PDF课程大纲转化为结构化、可对比的学术数据。该项目解决了学生普遍面临的一个痛点：课程要求、评分方案和学业工作量信息往往隐藏在冗长、格式不统一的大纲文档中，导致跨课程对比变得十分困难。",
+            "我设计并实现了一套基于大语言模型（LLM）的解析流水线，能够自动从PDF课程大纲中提取评分组成部分（例如考试、作业、小测验、项目、课堂参与度）。通过基于GPT的信息提取结合置信度过滤机制，该系统能够将原始大纲文本转化为结构化记录，同时兼容多种文档布局、杂乱格式和模糊描述。低置信度的提取结果会被自动过滤，以确保数据的可靠性。",
+            "该流水线支持多份课程大纲的批量处理，输出统一的数据集，为后续跨课程评分结构的可视化和分析提供支持。解析结果可用于对比学业工作量分布、识别评估模式，并为数据驱动的课程选择提供支撑。该项目展示了大语言模型在学术文档智能处理中的应用价值，用灵活的、基于示例的提取方式替代了脆弱的规则化解析方案。"
+          ]
+        },
+        {
+          "id": "project-cs208",
+          "headingHtml": "<strong>涌现与交互行为形态</strong> — 生成式系统与计算艺术作品集",
+          "metas": ["2025年10月 - 2025年12月"],
+          "paragraphs": [
+            "<em><a href=\"https://docs.google.com/document/d/1-9LvUaNYXtNyC0wnZ3wM34BBXraTOf_Q9b8EKZrsun4/edit?usp=sharing\" target=\"_blank\" rel=\"noopener noreferrer\">涌现与交互行为形态</a></em> 是一份为期一学期的计算艺术与生成式系统作品集，为昆山杜克大学计算机图形学课程设计完成。该项目探索了视觉形态、节奏和意义如何从算法规则、随机性和用户输入的交互中涌现，而非通过逐帧显式设计生成。",
+            "在六个生成式子项目中，我设计了基于循环、参数化规则、随机变异的系统，并支持通过键盘和鼠标实现实时交互输入。与生成固定结果不同，每个系统的构建都旨在随时间展现不同的行为模式，让模式、结构和视觉美感从底层逻辑中动态涌现。该作品强调过程大于结果，将算法视为表达性工具，而非确定性的执行程序。",
+            "交互在该项目中占据核心地位。用户输入直接改变系统状态，将观察者转变为积极参与者，其操作手势能够实时重塑系统的运动、平衡和视觉输出。这种方式凸显了计算本身作为一种独立的艺术语言，自主性被嵌入系统设计中，美感则源于涌现的行为模式。该作品集反映了我在生成式思维、交互系统和算法形态构建方面的持续实践与成长。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "research",
+      "title": "科研经历",
+      "items": [
+        {
+          "id": "research-chatdku",
+          "headingHtml": "<strong>边缘智能实验室（Edge Intelligence Lab）</strong> — ChatDKU 项目科研负责人",
+          "metas": [
+            "2025年8月 - 至今",
+            "指导老师：罗冰 教授，数据与计算科学助理教授、剑桥大学克莱尔学堂访问学者、IEEE 高级会员"
+          ],
+          "paragraphs": [
+            "我担任 ChatDKU 项目的科研负责人，负责系统架构设计以及大规模人工智能智能体在真实学术环境中的落地部署。我主导了多项功能开发，包括 SQL 智能体扩展、复杂多阶段检索流水线设计，以及基于 DSPy 和 LlamaIndex 的最先进检索增强生成（RAG）方法的集成。",
+            "同时，我负责维护实验室的后端基础设施，包括性能监控、系统诊断，以及 Django 服务和数据库（Redis、Chroma、PostgreSQL）的管理。我引入了模块化重构、持续集成（CI）工作流和基于 Git 的版本控制规范，支撑了每日超过 50 名活跃用户的使用，并在真实场景中将响应准确率提升了约 35%。"
+          ],
+          "links": [
+            {
+              "href": "https://chatdku.dukekunshan.edu.cn/",
+              "label": "ChatDKU 网站（需要连接DKU内部网络）"
+            }
+          ]
+        },
+        {
+          "id": "research-igem",
+          "headingHtml": "<strong>昆山杜克大学 iGEM 团队 — 帕金森病研究项目</strong>",
+          "metas": [
+            "2024年10月 - 2025年11月",
+            "指导老师：黄林峰 副教授，生物学专业"
+          ],
+          "paragraphs": [
+            "作为科研团队成员，负责文献综述、生物建模支持和科学可视化工作。同时，我主导了视觉沟通相关工作，包括图表设计、视频剪辑和维基百科展示，以清晰地传达复杂的生物学概念和建模结果。",
+            "该项目在最终展示中荣获银牌奖项。"
+          ],
+          "links": [
+            {
+              "href": "https://2025.igem.wiki/dku/",
+              "label": "DKU iGEM 官网"
+            }
+          ]
+        },
+        {
+          "id": "research-ucorp",
+          "headingHtml": "<strong>企业合作项目：绘制人工智能教育的未来图景</strong>",
+          "metas": [
+            "2024年9月 - 2025年7月",
+            "指导老师：刘俊杰（Eric Liu），Philosophie AI 首席执行官"
+          ],
+          "paragraphs": [
+            "作为科研团队负责人，我带领项目从问题提出、数据收集分析到结果综合完成全流程推进。我完成了全球人工智能教育实践的全面文献综述，设计调查问卷以收集定量和定性数据，并协调团队沟通以确保项目稳步推进。",
+            "该项目提升了我在科研方法论、数据收集、协作科研管理，以及向学术和非技术受众传达复杂研究结果的能力。"
+          ],
+          "links": [
+            {
+              "href": "https://duke.box.com/s/chtil1wp1nnnqvi66izztd9b5j5gemmp",
+              "label": "研究报告"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "working",
+      "title": "工作经历",
+      "items": [
+        {
+          "id": "working-hp",
+          "headingHtml": "<strong>数据分析师实习生</strong> — 惠普（HP）",
+          "metas": ["2025年11月 - 2026年1月", "耗材业务部 · 北京"],
+          "paragraphs": [
+            "在惠普实习期间，我的工作聚焦于耗材业务数据管理和运营分析。我设计并实现了<strong>数据自动化程序</strong>，简化了重复性的数据处理任务，显著减少了工作人员的手动工作量，提升了日常运营的效率和可靠性。",
+            "我负责支撑大规模运营数据集，通过数据整理、清洗和维护确保数据的准确性和一致性。同时，我分析了端到端的耗材管理工作流，识别低效环节，并将业务需求转化为可落地的技术解决方案。"
+          ]
+        },
+        {
+          "id": "working-ce",
+          "headingHtml": "<strong>大学项目助理</strong> — 校园事务办公室（Campus Engagement Office）",
+          "metas": ["2024年11月 - 至今"],
+          "paragraphs": [
+            "我负责协调大型校园活动，包括<a href=\"https://mp.weixin.qq.com/s/eSRcPqDFpSVHQu5IoDdIwA\" target=\"_blank\" rel=\"noopener noreferrer\">《感恩节晚会》（Tanksgiving Fair）</a>、<a href=\"https://mp.weixin.qq.com/s/7A8eCE691YGvqlFdVCEW7w\" target=\"_blank\" rel=\"noopener noreferrer\">《文化嘉年华》（Culture Carnival）</a>，以及<a href=\"https://mp.weixin.qq.com/s/ydjLKQvK91kM6Sh48_B7yA\" target=\"_blank\" rel=\"noopener noreferrer\">《毕业生晚宴》（Senior Banquet）</a>，每场活动均吸引超过 200 名参与者。我的职责包括后勤规划、日程安排和跨团队沟通。",
+            "通过在高压环境下管理多项任务，我培养了较强的活动协调、问题解决和高效沟通能力。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "leaderships",
+      "title": "学生领导力经历",
+      "items": [
+        {
+          "id": "leadership-ol",
+          "headingHtml": "<strong>新生入学导向导师（Orientation Leader）</strong>",
+          "metas": ["2025年8月 - 2025年12月"],
+          "paragraphs": [
+            "作为<a href=\"https://mp.weixin.qq.com/s/ydjLKQvK91kM6Sh48_B7yA\" target=\"_blank\" rel=\"noopener noreferrer\">新生入学导向导师</a>，我通过结构化演示、引导式活动和一对一沟通，积极向新生及其家长推广校园生活。我清晰、生动地介绍了学术资源、校园设施和学生文化，帮助新生快速适应大学环境。",
+            "我担任新生的主要联系人，解答他们的疑问和顾虑，同时促进参与者之间的积极互动。通过有效的公开演讲和人际沟通，我为新生打造了包容、温暖的入学导向体验，并助力提升了学校的公众形象。"
+          ]
+        },
+        {
+          "id": "leadership-parkrun",
+          "headingHtml": "<strong>公园跑活动组织者</strong> — 昆山杜克大学体育教研部",
+          "metas": ["2025年1月 - 2026年1月"],
+          "paragraphs": [
+            "我负责组织和管理大渔湾公园每周 5 公里<a href=\"https://athletics.dukekunshan.edu.cn/dku-park-run/\" target=\"_blank\" rel=\"noopener noreferrer\">公园跑活动</a>，包括活动规划、执行，以及协调涉及校内和校外参与者的大型跑步活动。我统筹活动推广、志愿者协调、安全安排和现场运营，确保活动顺利开展。",
+            "截至目前，我已规划并协调了超过 10 场活动，每场平均吸引约 180 名参与者。我的职责包括设计宣传材料、管理线上推广、通过调查问卷收集和分析参与者反馈，以及与学校体育教研部、跑步社团和大禹湾公园管理团队进行沟通对接。",
+            "通过持续的活动执行和品牌打造，我助力建立了一个稳定且具有较高辨识度的校园跑步项目，显著提升了学生参与度，并加强了围绕健身和健康的社区凝聚力。"
+          ]
+        },
+        {
+          "id": "leadership-mood",
+          "headingHtml": "<strong>活动部部长</strong> — 昆山杜克大学木禾心理学社团（Mood Psychology Club）",
+          "metas": ["2024年10月 - 至今"],
+          "paragraphs": [
+            "作为活动部部长，我主导了大型校园心理活动的全流程规划和执行，包括《勇气挑战》（Courage Challenge）和《心与心：童年之梦》（Heart-to-Heart: Dream of Childhood）—— 一项支持留守儿童成长和情感发展的公益项目。每场活动最多吸引 60 名参与者。",
+            "我协调部门成员、分配工作职责、管理项目时间表，并确保跨团队的顺畅协作。在这个岗位上，我提升了自身的领导力、沟通能力和项目管理能力，同时学会了在紧迫期限下推动团队协作。",
+            "通过设计和落地基于心理学的活动，我对结构化活动如何培养学生的同理心、韧性和情绪认知有了更深入的理解，成功将心理学概念转化为有意义、有影响力的校园体验。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teaching",
+      "title": "教学经历",
+      "items": [
+        {
+          "id": "teaching-math105",
+          "headingHtml": "<strong>助教 — 微积分</strong>",
+          "metas": ["2025年10月 - 2025年12月"],
+          "paragraphs": [
+            "我负责主持每周的习题讲解课，并在办公时间提供个性化学术支持，解决学生常见的解题难点。我与课程讲师紧密协作，识别学生的学习困难并调整教学策略，提升了学生的理解能力和课堂参与度。"
+          ]
+        },
+        {
+          "id": "teaching-dku101",
+          "headingHtml": "<strong>助教 — DKU 101 入学指导课程</strong>",
+          "metas": ["2025年8月 - 2025年10月"],
+          "paragraphs": [
+            "作为 DKU 101 课程助教，我为来自不同文化和教育背景的大一新生提供支持，帮助他们顺利过渡到昆山杜克大学的学习和生活。",
+            "我主持小组讨论和互动环节，聚焦跨文化适应主题，帮助中外学生应对课堂文化、沟通方式和学术诚信标准方面的差异。通过将学校制度转化为实际的生活场景，我帮助学生将抽象规则与日常校园生活联系起来，做出明智的决策。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "title": "联系方式",
+      "paragraphs": [
+        "邮箱：<a href=\"mailto:zhiwei.li.457@gmail.com\">zhiwei.li.457@gmail.com</a><br />GitHub：<a href=\"https://github.com/zhiwei531\" target=\"_blank\" rel=\"noopener noreferrer\">github.com/zhiwei531</a><br />领英：<a href=\"https://www.linkedin.com/in/zhiwei-li-457-profile\" target=\"_blank\" rel=\"noopener noreferrer\">linkedin.com/in/zhiwei-li-457-profile</a>"
+      ]
+    }
+  ]
+}

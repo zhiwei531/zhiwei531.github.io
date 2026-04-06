@@ -200,7 +200,7 @@
         },
         {
           "id": "research-igem",
-          "headingHtml": "<strong><a href=\"https://2025.igem.wiki/dku/\" target=\"_blank\" rel=\"noopener noreferrer\">DKU iGEM</a> — Parkinson's Disease Project</strong>",
+          "headingHtml": "<strong>DKU iGEM</strong> — Parkinson's Disease Project",
           "metas": [
             "October 2024 - November 2025",
             "Supervisor: Linfeng Huang, Associate Professor of Biology"
@@ -208,6 +208,12 @@
           "paragraphs": [
             "Research team member responsible for literature review, biological modeling support, and scientific visualization. I also led visual communication efforts, including figure design, video editing, and wiki presentation, to clearly convey complex biological concepts and modeling results.",
             "This project won a silver medal in the final pitch."
+          ],
+          "links": [
+            {
+              "href": "https://2025.igem.wiki/dku/",
+              "label": "DKU iGEM Website"
+            }
           ]
         },
         {

@@ -14,6 +14,11 @@
       "className": "nav-link"
     },
     {
+      "id": "stack",
+      "label": "Technical Stack",
+      "className": "nav-link"
+    },
+    {
       "id": "projects",
       "label": "Projects",
       "className": "nav-link",
@@ -49,7 +54,7 @@
       "className": "nav-link",
       "children": [
         { "id": "leadership-ol", "label": "Orientation Leader" },
-        { "id": "leadership-parkrun", "label": "ParkRun Organizor" },
+        { "id": "leadership-parkrun", "label": "Park Run Organizer" },
         { "id": "leadership-mood", "label": "Mood Psychology" }
       ]
     },
@@ -82,7 +87,7 @@
     "details": [
       {
         "label": "Courses",
-        "text": "Machine Learning, Programming and Database (A+), Probability and Statistics, Linear Algebra, Calculus, Computer Graphics (A+)."
+        "text": "Machine Learning, Programming and Database (A+), Computer Graphics (A+), Image Data Science, Computer Organization, Probability and Statistics, Linear Algebra, Calculus, Economics."
       },
       {
         "label": "Honors",
@@ -115,6 +120,36 @@
     ]
   },
   "sections": [
+    {
+      "id": "stack",
+      "title": "Technical Stack",
+      "items": [
+        {
+          "headingHtml": "<strong>Languages</strong>",
+          "paragraphs": ["Chinese Mandarin, English (GRE 330)."]
+        },
+        {
+          "headingHtml": "<strong>Programming & Web</strong>",
+          "paragraphs": ["Python, Java, C/C++, SQL, MySQL, PostgreSQL, HTML, CSS, JavaScript."]
+        },
+        {
+          "headingHtml": "<strong>Backend & Developer Tools</strong>",
+          "paragraphs": ["Git, GitHub, Linux, macOS, Django, FastAPI, Flask, Jupyter, Conda."]
+        },
+        {
+          "headingHtml": "<strong>AI / ML Development</strong>",
+          "paragraphs": ["LlamaIndex, DSPy, LangChain, vLLM, SGLang, DeepLabCut, YOLO, scikit-learn, Hugging Face, NumPy, Pandas."]
+        },
+        {
+          "headingHtml": "<strong>Databases & Data Systems</strong>",
+          "paragraphs": ["PostgreSQL, Redis, ChromaDB, Milvus."]
+        },
+        {
+          "headingHtml": "<strong>Design & Digital Media</strong>",
+          "paragraphs": ["Photoshop, Illustrator, Premiere, After Effects, Processing."]
+        }
+      ]
+    },
     {
       "id": "projects",
       "title": "Projects",
@@ -171,7 +206,13 @@
           "paragraphs": [
             "<em><a href=\"https://docs.google.com/document/d/1-9LvUaNYXtNyC0wnZ3wM34BBXraTOf_Q9b8EKZrsun4/edit?usp=sharing\" target=\"_blank\" rel=\"noopener noreferrer\">Emergence + Interactive Behaviors as Forms</a></em> is a semester-long computational art and generative systems portfolio developed for the Computer Graphics course at Duke Kunshan University. The project explores how visual form, rhythm, and meaning can emerge from the interaction between algorithmic rules, randomness, and user input, rather than being explicitly designed frame by frame.",
             "Across six generative projects, I designed systems driven by loops, parametric rules, stochastic variation, and real-time interaction through keyboard and mouse input. Instead of producing fixed outcomes, each system was constructed to reveal different behaviors over time, allowing patterns, structures, and visual aesthetics to emerge dynamically from the underlying logic. The work emphasizes process over result, treating algorithms as expressive mechanisms rather than deterministic tools.",
-            "Interaction plays a central role in the project. User inputs directly alter system states, transforming the viewer into an active participant whose gestures reshape motion, balance, and visual outcomes in real time. This approach highlights computation as an artistic language in its own right-one where autonomy is embedded in system design and aesthetics arise from emergent behavior. The portfolio reflects a growing practice centered on generative thinking, interactive systems, and algorithmic form-making."
+            "Interaction plays a central role in the project. User inputs directly alter system states, transforming the viewer into an active participant whose gestures reshape motion, balance, and visual outcomes in real time. This approach highlights computation as an artistic language in its own right—one where autonomy is embedded in system design and aesthetics arise from emergent behavior. The portfolio reflects a growing practice centered on generative thinking, interactive systems, and algorithmic form-making."
+          ],
+          "links": [
+            {
+              "href": "https://github.com/zhiwei531/computer-graphics-design",
+              "label": "Project GitHub Repository"
+            }
           ]
         }
       ]
@@ -218,7 +259,7 @@
         },
         {
           "id": "research-ucorp",
-          "headingHtml": "<strong>Exterprise Collaboration: Mapping the Future of AI Education</strong>",
+          "headingHtml": "<strong>Enterprise Collaboration: Mapping the Future of AI Education</strong>",
           "metas": [
             "September 2024 - July 2025",
             "Supervisor: Eric Liu, CEO of Philosophie AI"

@@ -14,6 +14,11 @@
       "className": "nav-link"
     },
     {
+      "id": "stack",
+      "label": "技术栈",
+      "className": "nav-link"
+    },
+    {
       "id": "projects",
       "label": "项目经历",
       "className": "nav-link",
@@ -82,7 +87,7 @@
     "details": [
       {
         "label": "主修课程",
-        "text": "机器学习、编程与数据库（成绩A+）、概率论与数理统计、线性代数、微积分、计算机图形学（成绩A+）。"
+        "text": "机器学习、编程与数据库（成绩 A+）、计算机图形学（成绩 A+）、图像数据科学、计算机组成原理、概率论与数理统计、线性代数、微积分、经济学。"
       },
       {
         "label": "荣誉奖项",
@@ -115,6 +120,36 @@
     ]
   },
   "sections": [
+    {
+      "id": "stack",
+      "title": "技术栈",
+      "items": [
+        {
+          "headingHtml": "<strong>语言能力</strong>",
+          "paragraphs": ["中文普通话、英语（GRE 330）。"]
+        },
+        {
+          "headingHtml": "<strong>编程与 Web</strong>",
+          "paragraphs": ["Python、Java、C/C++、SQL、MySQL、PostgreSQL、HTML、CSS、JavaScript。"]
+        },
+        {
+          "headingHtml": "<strong>后端与开发工具</strong>",
+          "paragraphs": ["Git、GitHub、Linux、macOS、Django、FastAPI、Flask、Jupyter、Conda。"]
+        },
+        {
+          "headingHtml": "<strong>AI / ML 开发</strong>",
+          "paragraphs": ["LlamaIndex、DSPy、LangChain、vLLM、SGLang、DeepLabCut、YOLO、scikit-learn、Hugging Face、NumPy、Pandas。"]
+        },
+        {
+          "headingHtml": "<strong>数据库与数据系统</strong>",
+          "paragraphs": ["PostgreSQL、Redis、ChromaDB、Milvus。"]
+        },
+        {
+          "headingHtml": "<strong>设计与数字媒体工具</strong>",
+          "paragraphs": ["Photoshop、Illustrator、Premiere、After Effects、Processing。"]
+        }
+      ]
+    },
     {
       "id": "projects",
       "title": "项目经历",
@@ -172,6 +207,12 @@
             "<em><a href=\"https://docs.google.com/document/d/1-9LvUaNYXtNyC0wnZ3wM34BBXraTOf_Q9b8EKZrsun4/edit?usp=sharing\" target=\"_blank\" rel=\"noopener noreferrer\">涌现与交互行为形态</a></em> 是一份为期一学期的计算艺术与生成式系统作品集，为昆山杜克大学计算机图形学课程设计完成。该项目探索了视觉形态、节奏和意义如何从算法规则、随机性和用户输入的交互中涌现，而非通过逐帧显式设计生成。",
             "在六个生成式子项目中，我设计了基于循环、参数化规则、随机变异的系统，并支持通过键盘和鼠标实现实时交互输入。与生成固定结果不同，每个系统的构建都旨在随时间展现不同的行为模式，让模式、结构和视觉美感从底层逻辑中动态涌现。该作品强调过程大于结果，将算法视为表达性工具，而非确定性的执行程序。",
             "交互在该项目中占据核心地位。用户输入直接改变系统状态，将观察者转变为积极参与者，其操作手势能够实时重塑系统的运动、平衡和视觉输出。这种方式凸显了计算本身作为一种独立的艺术语言，自主性被嵌入系统设计中，美感则源于涌现的行为模式。该作品集反映了我在生成式思维、交互系统和算法形态构建方面的持续实践与成长。"
+          ],
+          "links": [
+            {
+              "href": "https://github.com/zhiwei531/computer-graphics-design",
+              "label": "项目 GitHub 仓库"
+            }
           ]
         }
       ]
